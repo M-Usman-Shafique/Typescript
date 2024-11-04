@@ -9,7 +9,7 @@ export default function Users(props: userProps) {
   return (
     <>
       {props.users.map((user) => (
-        <div>
+        <div key={user.first}>
           <h5>
             {user.first} {user.last}
           </h5>

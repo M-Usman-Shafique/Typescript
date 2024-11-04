@@ -1,4 +1,5 @@
 import "./App.css";
+import Event from "./components/Event";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
@@ -29,6 +30,7 @@ export default function App() {
       <Oscar>
         <Heading>Oscar goes to Decaprio!</Heading>
       </Oscar>
+      <Event />
     </>
   );
 }
