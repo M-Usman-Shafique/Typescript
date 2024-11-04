@@ -5,7 +5,7 @@ export default function Event() {
 
   return (
     <>
-    <label htmlFor="txt">Enter: </label>
+      <label htmlFor="txt">Enter: </label>
       <input type="text" id="txt" onChange={handleChange} />
     </>
   );

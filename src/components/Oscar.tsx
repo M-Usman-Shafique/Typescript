@@ -1,11 +1,10 @@
 type oscarProps = {
-    children: React.ReactNode
-}
-export default function Oscar(props: oscarProps) {
-
+  children: React.ReactNode;
+};
+export default function Oscar({ children }: oscarProps) {
   return (
     <>
-    <div>{props.children}</div>
+      <div>{children}</div>
     </>
-  )
+  );
 }

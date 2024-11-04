@@ -32,7 +32,7 @@ export default function App() {
         <Heading>Oscar goes to Decaprio!</Heading>
       </Oscar>
       <Event />
-      <Style styles={{backgroundColor: 'red', padding: 4}}/>
+      <Style styles={{ backgroundColor: "green", padding: 4 }} />
     </>
   );
 }

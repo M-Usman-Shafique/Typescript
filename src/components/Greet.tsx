@@ -6,9 +6,8 @@ type greetProps = {
   msgs?: number;
   isLogin: boolean;
 };
-export default function Greet(props: greetProps) {
-  const [login, setLogin] = useState(props.isLogin);
-  const {msgs = 0} = props;
+export default function Greet({ name, msgs = 0, isLogin }: greetProps) {
+  const [login, setLogin] = useState(isLogin);
 
   const profileInfo = {
     age: 30,
@@ -20,13 +19,13 @@ export default function Greet(props: greetProps) {
     <>
       {login ? (
         <>
-          <h3>Welcome, {props.name}</h3>
+          <h3>Welcome, {name} !!</h3>
           <h5>You have {msgs} unread messages</h5>
           <Profile info={profileInfo} />
         </>
       ) : (
         <>
-          <h3>Hello, Guest !</h3>
+          <h3>Hello, Guest !!</h3>
         </>
       )}
       <button onClick={() => setLogin(!login)}>

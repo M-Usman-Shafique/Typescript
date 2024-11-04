@@ -5,10 +5,10 @@ type userProps = {
   }[];
 };
 
-export default function Users(props: userProps) {
+export default function Users({ users }: userProps) {
   return (
     <>
-      {props.users.map((user) => (
+      {users.map((user) => (
         <div key={user.first}>
           <h5>
             {user.first} {user.last}

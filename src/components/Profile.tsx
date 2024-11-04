@@ -6,12 +6,12 @@ type infoProps = {
   };
 };
 
-export default function Profile(props: infoProps) {
+export default function Profile({ info: { age, gender, job } }: infoProps) {
   return (
     <>
-      <p>Age: {props.info.age}</p>
-      <p>Gender: {props.info.gender}</p>
-      <p>Job: {props.info.job}</p>
+      <p>Age: {age}</p>
+      <p>Gender: {gender}</p>
+      <p>Job: {job}</p>
     </>
   );
 }
