@@ -9,7 +9,7 @@ type greetProps = {
 export default function Greet({ name, msgs = 0, isLogin }: greetProps) {
   const [login, setLogin] = useState(isLogin);
 
-  const profileInfo = {
+  const profileBio = {
     age: 30,
     gender: "Male",
     job: "Web Developer",
@@ -21,7 +21,7 @@ export default function Greet({ name, msgs = 0, isLogin }: greetProps) {
         <>
           <h3>Welcome, {name} !!</h3>
           <h5>You have {msgs} unread messages</h5>
-          <Profile info={profileInfo} />
+          <Profile bio={profileBio} />
         </>
       ) : (
         <>

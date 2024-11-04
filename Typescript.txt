@@ -80,7 +80,7 @@ Functions: define return type & type of its arguments.
 Exmp: function sum(x:number, y:number): number {
 
 }
-Type Inference: TS infer the tye itself when no type is defined by user.
+Type Inference: TS infer the type itself when no type is defined by user.
 Type Annotations: Explicitly defining a type
 
 
