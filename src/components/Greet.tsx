@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Profile from "./Profile";
 
 type greetProps = {
   name: string;
@@ -6,20 +7,30 @@ type greetProps = {
   isLogin: boolean;
 };
 export default function Greet(props: greetProps) {
-    const [login, setLogin] = useState(props.isLogin);
+  const [login, setLogin] = useState(props.isLogin);
+
+  const profileInfo = {
+    age: 30,
+    gender: "Male",
+    job: "Web Developer",
+  };
+
   return (
     <>
       {login ? (
         <>
           <h3>Welcome, {props.name}</h3>
-          <p>You have {props.msgs} unread messages.</p>
+          <h5>You have {props.msgs} unread messages</h5>
+          <Profile info={profileInfo} />
         </>
       ) : (
-      <>
-        <h3>Hello, Guest !</h3>
-      </>
+        <>
+          <h3>Hello, Guest !</h3>
+        </>
       )}
-        <button onClick={() => setLogin(!login)}>{login ? "Logout" : "Login"}</button>
+      <button onClick={() => setLogin(!login)}>
+        {login ? "Logout" : "Login"}
+      </button>
     </>
   );
 }
