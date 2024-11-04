@@ -1,10 +1,4 @@
-type infoProps = {
-  info: {
-    age: number;
-    gender: string;
-    job: string;
-  };
-};
+import { infoProps } from "../types/types";
 
 export default function Profile({ info: { age, gender, job } }: infoProps) {
   return (
