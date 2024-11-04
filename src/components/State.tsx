@@ -5,7 +5,7 @@ type User = {
   email: string;
 };
 export default function State() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User>({} as User); // when we know that user will never be null
 
   const handleShow = () => {
     setUser({
@@ -19,9 +19,8 @@ export default function State() {
       <button onClick={handleShow} style={{ marginRight: 8 }}>
         Show User Details
       </button>
-      <button onClick={() => setUser(null)}>Hide User Details</button>
-          <p>Username: {user?.name}</p> {/* Typescript automatically added optional chaining as user value can be null*/}
-          <p>Email: {user?.email}</p>
+          <p>Username: {user.name}</p>
+          <p>Email: {user.email}</p>
     </>
   );
 }
