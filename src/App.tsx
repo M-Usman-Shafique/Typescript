@@ -4,6 +4,7 @@ import Greet from "./components/Greet";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
 import Status from "./components/Status";
+import Style from "./components/Style";
 import Users from "./components/Users";
 
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <Heading>Oscar goes to Decaprio!</Heading>
       </Oscar>
       <Event />
+      <Style styles={{backgroundColor: 'red', padding: 4}}/>
     </>
   );
 }
