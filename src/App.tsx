@@ -23,7 +23,7 @@ export default function App() {
   return (
     <>
       <Heading>Homepage</Heading>
-      <Greet name="Usman" msgs={12} isLogin={false} />
+      <Greet name="Usman" isLogin={false} />
       <Users users={usersList} />
       <Status status="success" />
       <Oscar>
