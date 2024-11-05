@@ -1,6 +1,6 @@
 import { bioProps } from "../types/types";
 
-export default function Profile({ bio: { age, gender, job } }: bioProps) {
+export default function Profile({ age, gender, job }: bioProps) {
   return (
     <>
       <p>Age: {age}</p>

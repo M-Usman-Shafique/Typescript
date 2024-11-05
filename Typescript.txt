@@ -1,5 +1,3 @@
-tsc --watch
-
 CORE DATA TYPES:
 1. Number
 2. String
@@ -61,7 +59,8 @@ enum roles = {
 }
 console.log(roles.USER) // user
 
-ANY: by default type or typescript disabled
+ANY: by default type or typescript disabled.
+Note: If TS infer the type of a variable, argument or function as any, it's considerd as a problem and to fix it define type explicitly.
 UNKNOWN: similar to ANY but a little different.
 Diff. b/w ANY & UNKNOWN:
 let data:any;
@@ -77,10 +76,13 @@ item = data; // error
 Diff. b/w void & never
 VOID: For a function who's not returning anything.
 Functions: define return type & type of its arguments.
-Exmp: function sum(x:number, y:number): number {
+Exmp: function sum(x:number, y:number): number {}
 
-}
-Type Inference: TS infer the type itself when no type is defined by user.
+Type Inference: If we immediately assigning a value to a variable, then no need to explicitly mention that variable's type because in this case, TS infer the type itself.
+Exmp:
+let user = "Ali";
+user = 32; // error
+
 Type Annotations: Explicitly defining a type
 
 
@@ -102,7 +104,7 @@ interface Admin extends User {
 function getAdmin(obj: Admin) {}
 getAdmin({name: "Ali", age: 15, isAdmin: true})
 
-TYPE ALIASES: user defined data types
+TYPE ALIASES: custom or user defined data types.
 Exmp#1:
 type xyz = number | string | null;     // pipe is called Union
 let a: xyz; // type of "a" is number | string | null
@@ -134,15 +136,44 @@ public readonly brand: string
 
 FUNCTIONS:
 Function Type: type of value returned by a function.
+Syntax:
+function func(parameter: type): ReturnType {
+  // function body
+}
+Exmp:
 function myFunc(name: string, gender?: string, cb: (arg: string) => void) {
-
-    cb("Hi..");
-
+    return cb("Hi..");
 }
 
 myFunc("Usman", (arg: string) => {
     console.log(arg) // Hi..
 })
+
+Arrow Function:
+const func = (parameters: type): ReturnType => {
+  // function body
+};
+
+Async Function:
+async function fetchData(url: string): Promise<string> {
+  // rest of the logic
+}
+
+Function With No Return Value:
+const func = (name: string): void => {
+  console.log(name)
+  return name; // error
+};
+
+Function That Never Return A Value:
+const handleError = (err: string): never => {
+  throw new Error(err);
+};
+
+Function Returning Object:
+const func = (): {name: string, age: number, isMale: boolean} => {
+  return {name: "Ali", age: 30, isMale: true}
+};
 
 REST PARAMETERS:
 function myFunc(...arg: number[]) {
