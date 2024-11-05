@@ -1,15 +1,11 @@
 import { useState } from "react";
 import Profile from "./Profile";
+import { bioProps, greetProps } from "../types/types";
 
-type greetProps = {
-  name: string;
-  msgs?: number;
-  isLogin: boolean;
-};
 export default function Greet({ name, msgs = 0, isLogin }: greetProps) {
   const [login, setLogin] = useState(isLogin);
 
-  const profileBio = {
+  const profileBio: bioProps = {
     age: 30,
     gender: "Male",
     job: "Web Developer",
@@ -21,7 +17,7 @@ export default function Greet({ name, msgs = 0, isLogin }: greetProps) {
         <>
           <h3>Welcome, {name} !!</h3>
           <h5>You have {msgs} unread messages</h5>
-          <Profile bio={profileBio} />
+          <Profile {...profileBio} />
         </>
       ) : (
         <>

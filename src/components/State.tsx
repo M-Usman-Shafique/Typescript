@@ -4,8 +4,9 @@ type User = {
   name: string;
   email: string;
 };
+
 export default function State() {
-  const [user, setUser] = useState<User>({} as User); // when we know that user will never be null
+  const [user, setUser] = useState<User>({} as User); // when we are sure that user will never be null
 
   const handleShow = () => {
     setUser({

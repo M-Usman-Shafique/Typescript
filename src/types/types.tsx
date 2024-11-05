@@ -1,3 +1,9 @@
+export type greetProps = {
+  name: string;
+  msgs?: number;
+  isLogin: boolean;
+};
+
 export type bioProps = {
     age: number;
     gender: string;
@@ -5,19 +11,19 @@ export type bioProps = {
 };
 
 // Type inheritence:
-export type infoProps = {
-  skill: string;
-  info: bioProps;
-};
+// export type infoProps = {
+//   skill: string;
+//   info: bioProps;
+// };
 
-const userInfo: infoProps = {
-  skill: "JavaScript",
-  info: {
-      age: 30,
-      gender: "male",
-      job: "developer",
-  },
-};
+// const userInfo: infoProps = {
+//   skill: "JavaScript",
+//   info: {
+//       age: 30,
+//       gender: "male",
+//       job: "developer",
+//   },
+// };
 
 // Type composition
 export type infoProps = {

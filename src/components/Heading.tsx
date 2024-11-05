@@ -1,6 +1,7 @@
 type headingProps = {
   children: string;
 };
+
 export default function Heading({ children }: headingProps) {
   return (
     <>
