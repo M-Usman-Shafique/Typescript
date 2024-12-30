@@ -1,4 +1,3 @@
-import "./App.css";
 import Event from "./components/Event";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
@@ -10,18 +9,9 @@ import Users from "./components/Users";
 
 export default function App() {
   const usersList = [
-    {
-      first: "Noman",
-      last: "Shafiq",
-    },
-    {
-      first: "Salman",
-      last: "Shafiq",
-    },
-    {
-      first: "Waseem",
-      last: "Shah",
-    },
+    { first: "Noman", last: "Shafiq" },
+    { first: "Salman", last: "Shafiq" },
+    { first: "Waseem", last: "Shah" },
   ];
   return (
     <>
