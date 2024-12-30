@@ -13,6 +13,7 @@ export default function App() {
     { first: "Salman", last: "Shafiq" },
     { first: "Waseem", last: "Shah" },
   ];
+
   return (
     <>
       <Heading>Homepage</Heading>
@@ -23,7 +24,7 @@ export default function App() {
         <Heading>Oscar goes to Decaprio!</Heading>
       </Oscar>
       <Event />
-      <Style styles={{ backgroundColor: "green", padding: 4 }} />
+      <Style styles={{ backgroundColor: "royalblue", padding: 8 }} />
       <State />
     </>
   );
